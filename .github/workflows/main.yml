@@ -39,6 +39,8 @@ jobs:
           echo 'PUID=${{ secrets.PUID }}' >> .env
           echo 'TZ=${{ secrets.TZ }}' >> .env
           echo 'CONF_DIR=${{ secrets.CONF_DIR }}' >> .env
-          echo 'CLOUD_DIR=${{ secrets.CLOUD_DIR }}' >> .env
+          echo 'VALHEIM_SERVER_NAME=${{ secrets.VALHEIM_SERVER_NAME }}' >> .env
+          echo 'VALHEIM_WORLD_NAME=${{ secrets.VALHEIM_WORLD_NAME }}' >> .env
+          echo 'VALHEIM_SERVER_PASS=${{ secrets.VALHEIM_SERVER_PASS }}' >> .env
           
           docker-compose $(find docker-compose.*.yml | sed -e 's/^/-f /') up -d
