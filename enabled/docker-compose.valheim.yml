@@ -5,6 +5,9 @@ services:
     container_name: valheim
     restart: unless-stopped
     environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - TZ=${TZ}
       - SERVER_NAME=${VALHEIM_SERVER_NAME}
       - WORLD_NAME=${VALHEIM_WORLD_NAME}
       - SERVER_PASS=${VALHEIM_SERVER_PASS}
