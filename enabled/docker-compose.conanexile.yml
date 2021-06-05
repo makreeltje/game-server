@@ -1,4 +1,4 @@
-version: "3.5"
+version: "3.7"
 
 services:
   conanexiles:
@@ -7,15 +7,22 @@ services:
     restart: unless-stopped
     environment:
       - "CONANEXILES_ServerSettings_ServerSettings_AdminPassword=ThanksForThisSmartSolution"
-      - "CONANEXILES_Engine_OnlineSubSystemSteam_ServerName=My Cool Server"
+      - "CONANEXILES_Engine_OnlineSubSystemSteam_ServerName=My Cool Server 1"
       - "CONANEXILES_Engine_OnlineSubSystemSteam_ServerPassword=MySecret"
       - "CONANEXILES_INSTANCENAME=exiles0"
-      # Rcon for Ingame Notfication
       - "CONANEXILES_Game_RconPlugin_RconEnabled=1"
       - "CONANEXILES_Game_RconPlugin_RconPassword=REDACTED"
       - "CONANEXILES_Game_RconPlugin_RconPort=25575"
       - "CONANEXILES_Game_RconPlugin_RconMaxKarma=60"
+      - "CONANEXILES_UPDATE_SHUTDOWN_TIMER=15"
       # Mods
+      ## Pippi: 880454836                                    # Servermanagemnt on another level
+      ## Fashionist: 1159180273                              # Nice Styles, also restyle ingame
+      ## Barbarian Barber: 2050780234                        # Very Nice Mod, with alot new hair styles; works well in combination with fashionist
+      ## Nilfhein minimap: 1389908968                        # Very nice minimap
+      ## Less Building Placement Restrictions: 1369743238    # Stop limitations of building system
+      ## Lexa's Exiled Lands Improved: 2356146223            # Dual Wield (Sword, Axe) and some other nice enhacements
+      ## Javelin Improved: 1701136207                        # One of the best, new javelin combos and styles, well balanced
       - "CONANEXILES_MODS=880454836,1159180273,1389908968,1369743238,2050780234,2356146223,1701136207"
       # Very Good Defaults
       - "CONANEXILES_Engine_/script/onlinesubsystemutils.ipnetdriver_NetServerMaxTickRate=30" #INSERT A VALUE OF 30 OR HIGHER
@@ -223,13 +230,12 @@ services:
       - "CONANEXILES_Lightmass_DevOptions.StaticLightingProductionQuality_NumIndirectIrradiancePhotonsScale=1"
       - "CONANEXILES_Lightmass_DevOptions.StaticLightingProductionQuality_AdaptiveBrightnessThresholdScale=.01"
       - "CONANEXILES_Lightmass_DevOptions.ImportanceTracing_NumHemisphereSamples=256" 
-
     ports:
         - 7777:7777/udp
         - 7778:7778/udp
         - 27015:27015/udp
     volumes:
-        - data:/conanexiles
+        - ${CONF_DIR}/conanexiles:/conanexiles
 
 volumes:
     data:
