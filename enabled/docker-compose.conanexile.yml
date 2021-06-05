@@ -1,10 +1,10 @@
-version: "3.5"
+version: "3.7"
 
 services:
-  conanexiles:
+  conanexile:
     image: alinmear/docker-conanexiles:latest
+    container_name: conanexile
     restart: unless-stopped
-    container_name: conanexiles
     environment:
       - "CONANEXILES_ServerSettings_ServerSettings_AdminPassword=ThanksForThisSmartSolution"
       - "CONANEXILES_Engine_OnlineSubSystemSteam_ServerName=My Cool Server"
@@ -229,7 +229,4 @@ services:
         - 7778:7778/udp
         - 27015:27015/udp
     volumes:
-        - data:/conanexiles
-
-volumes:
-    data:
+        - ${CONF_DIR}/conanexiles:/conanexiles
