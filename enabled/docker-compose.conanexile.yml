@@ -6,10 +6,10 @@ services:
     container_name: conanexiles
     restart: unless-stopped
     environment:
-      - "CONANEXILES_ServerSettings_ServerSettings_AdminPassword=ThanksForThisSmartSolution"
-      - "CONANEXILES_Engine_OnlineSubSystemSteam_ServerName=My Cool Server 1"
-      - "CONANEXILES_Engine_OnlineSubSystemSteam_ServerPassword=MySecret"
-      - "CONANEXILES_INSTANCENAME=exiles0"
+      - "CONANEXILES_ServerSettings_ServerSettings_AdminPassword=superultimatebepis"
+      - "CONANEXILES_Engine_OnlineSubSystemSteam_ServerName=Bepis"
+      - "CONANEXILES_Engine_OnlineSubSystemSteam_ServerPassword=ultimatebepis"
+      - "CONANEXILES_INSTANCENAME=bepis"
       - "CONANEXILES_Game_RconPlugin_RconEnabled=1"
       - "CONANEXILES_Game_RconPlugin_RconPassword=REDACTED"
       - "CONANEXILES_Game_RconPlugin_RconPort=25575"
@@ -23,7 +23,7 @@ services:
       ## Less Building Placement Restrictions: 1369743238    # Stop limitations of building system
       ## Lexa's Exiled Lands Improved: 2356146223            # Dual Wield (Sword, Axe) and some other nice enhacements
       ## Javelin Improved: 1701136207                        # One of the best, new javelin combos and styles, well balanced
-      - "CONANEXILES_MODS=880454836,1159180273,1389908968,1369743238,2050780234,2356146223,1701136207"
+      - "CONANEXILES_MODS=880454836,1389908968,1369743238"
       # Very Good Defaults
       - "CONANEXILES_Engine_/script/onlinesubsystemutils.ipnetdriver_NetServerMaxTickRate=30" #INSERT A VALUE OF 30 OR HIGHER
       - "CONANEXILES_Engine_/script/onlinesubsystemutils.ipnetdriver_MaxClientRate=600000"
@@ -236,6 +236,3 @@ services:
         - 27015:27015/udp
     volumes:
         - ${CONF_DIR}/conanexiles:/conanexiles
-
-volumes:
-    data:
