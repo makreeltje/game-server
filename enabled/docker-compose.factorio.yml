@@ -21,3 +21,4 @@ services:
         - 34197:34197/udp
     volumes:
         - ${CONF_DIR}/factorio:/factorio
+        - ${CONF_DIR}/factorio/server-settings.json:/server-settings.json
