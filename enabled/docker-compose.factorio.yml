@@ -16,9 +16,7 @@ services:
       - INSTANCE_DESC=I said Bepis
       - USERNAME=WutTheCow
       - TOKEN=c486fb80bccc3527e2001591e9ec68
-    entrypoint: /bin/sh -c "mkdir -p /factorio/config && envsubst < /server-settings.json > /factorio/config/server-settings.json && exec /docker-entrypoint.sh"
     ports:
         - 34197:34197/udp
     volumes:
         - ${CONF_DIR}/factorio:/factorio
-        - ${CONF_DIR}/factorio/server-settings.json:/server-settings.json
