@@ -13,7 +13,7 @@ services:
       TYPE: CURSEFORGE
       CF_SERVER_MOD: /modpacks/better-minecraft.zip
       SERVER_NAME: "Better Minecraft [FORGE]"
-      USE_MODPACK_START_SCRIPT: true
+      USE_MODPACK_START_SCRIPT: "true"
       OPS: makreeltje_
     stdin_open: true
     volumes:
