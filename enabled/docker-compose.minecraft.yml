@@ -10,10 +10,11 @@ services:
       TZ: ${TZ}
       EULA: "TRUE"
       TYPE: CURSEFORGE
-      CF_SERVER_MOD: better-minecraft.zip
+      CF_SERVER_MOD: /modpacks/better-minecraft.zip
     stdin_open: true
     volumes:
       - ${CONF_DIR}/minecraft/data:/data
+      - ${CONF_DIR}/minecraft/modpacks:/modpacks
     ports:
       - 25565:25565
     tty: true
