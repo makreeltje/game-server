@@ -9,7 +9,6 @@ services:
       PGID: ${PGID}
       TZ: ${TZ}
       EULA: "TRUE"
-      VERSION: 1.18
       TYPE: CURSEFORGE
       CF_SERVER_MOD: /modpacks/better-minecraft.zip
       SERVER_NAME: "Better Minecraft [FORGE]"
