@@ -10,7 +10,7 @@ services:
       TZ: ${TZ}
       EULA: "TRUE"
       TYPE: CURSEFORGE
-      CF_SERVER_MOD: https://www.curseforge.com/minecraft/modpacks/better-minecraft-modpack-new/files/3555525
+      CF_SERVER_MOD: better-minecraft.zip
     stdin_open: true
     volumes:
       - ${CONF_DIR}/minecraft/data:/data
