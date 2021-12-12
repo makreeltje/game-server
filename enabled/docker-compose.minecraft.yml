@@ -10,7 +10,7 @@ services:
       TZ: ${TZ}
       EULA: "TRUE"
       TYPE: CURSEFORGE
-      MEMORY: 16G
+      MAX_MEMORY: 32G
       CF_SERVER_MOD: /modpacks/better-minecraft.zip
       SERVER_NAME: "Better Minecraft [FORGE]"
       USE_MODPACK_START_SCRIPT: "true"
