@@ -11,7 +11,7 @@ services:
       EULA: "TRUE"
       TYPE: CURSEFORGE
       MAX_MEMORY: 32G
-      CF_SERVER_MOD: /modpacks/All-of-Fabric-5-Server-1.2.4.zip
+      CF_SERVER_MOD: https://www.curseforge.com/minecraft/modpacks/all-of-fabric-5/download/3812242/file
       SERVER_NAME: "All of Fabric 5"
       USE_MODPACK_START_SCRIPT: "true"
       OPS: makreeltje_
