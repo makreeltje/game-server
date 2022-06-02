@@ -13,12 +13,10 @@ services:
       MAX_MEMORY: 32G
       CF_SERVER_MOD: https://www.curseforge.com/minecraft/modpacks/all-of-fabric-5/download/3812242/file
       SERVER_NAME: "All of Fabric 5"
-      USE_MODPACK_START_SCRIPT: "true"
-      OPS: makreeltje_
+      # USE_MODPACK_START_SCRIPT: "true"
     stdin_open: true
     volumes:
-      - ${CONF_DIR}/minecraft/data:/data
-      - ${CONF_DIR}/minecraft/modpacks:/modpacks
+      - ${CONF_DIR}/minecraft/data/alloffabric5:/data
     ports:
       - 25565:25565
     tty: true
