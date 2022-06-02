@@ -2,7 +2,7 @@ version: "3.7"
 services:
   minecraft:
     image: itzg/minecraft-server
-    container_name: minecraft
+    container_name: mc-alloffabric5
     restart: unless-stopped
     environment:
       PUID: ${PUID}
@@ -11,7 +11,7 @@ services:
       EULA: "TRUE"
       TYPE: CURSEFORGE
       MAX_MEMORY: 32G
-      CF_SERVER_MOD: https://www.curseforge.com/minecraft/modpacks/all-of-fabric-5/download/3812242/file
+      CF_SERVER_MOD: https://www.curseforge.com/minecraft/modpacks/all-of-fabric-5/download/3812242
       SERVER_NAME: "All of Fabric 5"
       # USE_MODPACK_START_SCRIPT: "true"
     stdin_open: true
