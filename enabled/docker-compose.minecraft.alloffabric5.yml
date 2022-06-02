@@ -9,7 +9,7 @@ services:
       PGID: ${PGID}
       TZ: ${TZ}
       EULA: "TRUE"
-      TYPE: CURSEFORGE
+      TYPE: FABRIC
       MAX_MEMORY: 32G
       CF_SERVER_MOD: https://media.forgecdn.net/files/3812/242/All-of-Fabric-5-Server-1.2.4.zip
       SERVER_NAME: "All of Fabric 5"
