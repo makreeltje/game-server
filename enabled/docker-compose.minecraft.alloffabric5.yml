@@ -13,7 +13,7 @@ services:
       MAX_MEMORY: 32G
       CF_SERVER_MOD: https://media.forgecdn.net/files/3812/242/All-of-Fabric-5-Server-1.2.4.zip
       SERVER_NAME: "All of Fabric 5"
-      # USE_MODPACK_START_SCRIPT: "true"
+      USE_MODPACK_START_SCRIPT: "true"
     stdin_open: true
     volumes:
       - ${CONF_DIR}/minecraft/data/alloffabric5:/data
