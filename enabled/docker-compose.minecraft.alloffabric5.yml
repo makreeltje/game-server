@@ -18,9 +18,11 @@ services:
       MAX_TICK_TIME: -1
       INIT_MEMORY: "1G"
       MAX_MEMORY: "16G"
+      ENABLE_RCON: "true"
     stdin_open: true
     volumes:
       - ${CONF_DIR}/minecraft/data/alloffabric5:/data
     ports:
       - 25565:25565
+      - 25575:25575
     tty: true
