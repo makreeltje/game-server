@@ -1,7 +1,7 @@
 version: "3.7"
 services:
   minecraft:
-    image: itzg/minecraft-server
+    image: itzg/minecraft-server:java17
     container_name: mc-alloffabric5
     restart: unless-stopped
     privileged: true
@@ -11,11 +11,13 @@ services:
       TZ: ${TZ}
       EULA: "TRUE"
       TYPE: CURSEFORGE
-      MAX_MEMORY: 32G
       CF_SERVER_MOD: https://media.forgecdn.net/files/3812/242/All-of-Fabric-5-Server-1.2.4.zip
       SERVER_NAME: "All of Fabric 5"
       USE_MODPACK_START_SCRIPT: "true"
       ENABLE_AUTOPAUSE: "TRUE"
+      MAX_TICK_TIME: -1
+      INIT_MEMORY: "1G"
+      MAX_MEMORY: "16G"
     stdin_open: true
     volumes:
       - ${CONF_DIR}/minecraft/data/alloffabric5:/data
