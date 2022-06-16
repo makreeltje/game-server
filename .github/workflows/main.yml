@@ -42,5 +42,9 @@ jobs:
           echo 'VALHEIM_SERVER_NAME=${{ secrets.VALHEIM_SERVER_NAME }}' >> .env
           echo 'VALHEIM_WORLD_NAME=${{ secrets.VALHEIM_WORLD_NAME }}' >> .env
           echo 'VALHEIM_SERVER_PASS=${{ secrets.VALHEIM_SERVER_PASS }}' >> .env
+          echo 'USERNAME=${{ secrets.USERNAME }}' >> .env
+          echo 'PASSWORD=${{ secrets.PASSWORD }}' >> .env
+          echo 'MC_HOSTNAME=${{ secrets.MC_HOSTNAME }}' >> .env
+          echo 'MC_RCON_PASSWORD=${{ secrets.MC_RCON_PASSWORD }}' >> .env
           
           docker-compose $(find docker-compose.*.yml | sed -e 's/^/-f /') up -d
