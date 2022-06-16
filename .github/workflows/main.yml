@@ -46,5 +46,6 @@ jobs:
           echo 'PASSWORD=${{ secrets.PASSWORD }}' >> .env
           echo 'MC_HOSTNAME=${{ secrets.MC_HOSTNAME }}' >> .env
           echo 'MC_RCON_PASSWORD=${{ secrets.MC_RCON_PASSWORD }}' >> .env
+          echo 'MEELSNET_DOMAIN=${{ secrets.MEELSNET_DOMAIN }}' >> .env
           
           docker-compose $(find docker-compose.*.yml | sed -e 's/^/-f /') up -d
