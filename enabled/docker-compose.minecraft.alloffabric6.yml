@@ -1,6 +1,6 @@
 version: "3.7"
 services:
-  minecraft:
+  mc-alloffabric6:
     image: itzg/minecraft-server:java17
     container_name: mc-alloffabric6
     restart: unless-stopped
