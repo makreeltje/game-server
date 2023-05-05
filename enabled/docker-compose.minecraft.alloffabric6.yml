@@ -11,7 +11,7 @@ services:
       TZ: ${TZ}
       EULA: "TRUE"
       TYPE: CURSEFORGE
-      CF_SERVER_MOD: https://mediafilez.forgecdn.net/files/4467/530/All-of-Fabric-6-Server-1.5.2.zip
+      CF_SERVER_MOD: https://mediafilez.forgecdn.net/files/4467/530/All-of-Fabric-6-Server-1.5.4.zip
       SERVER_NAME: "All of Fabric 6"
       USE_MODPACK_START_SCRIPT: "true"
       ENABLE_AUTOPAUSE: "TRUE"
@@ -19,7 +19,6 @@ services:
       AUTOPAUSE_TIMEOUT_EST: "60"
       MAX_TICK_TIME: -1
       INIT_MEMORY: "1G"
-      MAX_MEMORY: "8G"
       ENABLE_RCON: "true"
     stdin_open: true
     volumes:
